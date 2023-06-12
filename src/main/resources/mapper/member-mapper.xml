@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.board.mapper.MemberMapper">
+
+	<!-- 회원정보 -->
+	<select id="getMemberList" resultType="com.example.demo.board.dto.MemberDTO">
+		SELECT *
+		FROM sample_writer_tb
+	</select>
+	<!-- 회원정보 -->
+	<select id="searchMember" parameterType="com.example.demo.board.dto.MemberDTO" resultType="com.example.demo.board.dto.MemberDTO">
+		SELECT *
+		FROM sample_writer_tb
+		where board_writer_idx = #{board_writer_idx}
+	</select>
+	<insert id="joinMember" parameterType="com.example.demo.board.dto.MemberDTO">
+		insert into sample_writer_tb(
+			BOARD_WRITER, BOARD_WRITER_NAME, 
+			BOARD_WRITER_PW, BOARD_WRITER_PHONE, 
+			BOARD_WRITER_EMAIL, BOARD_WRITER_JOIN_DATE
+		)
+		values(
+			#{board_writer}, #{board_writer_name}, 
+			#{board_writer_pw}, #{board_writer_phone}, 
+			#{board_writer_email}, #{board_writer_join_date}
+		);
+	</insert>
+	<select id="login" parameterType="com.example.demo.board.dto.MemberDTO" resultType="com.example.demo.board.dto.MemberDTO">
+		SELECT *
+		FROM sample_writer_tb
+		where board_writer = #{board_writer}
+	</select>
+</mapper>

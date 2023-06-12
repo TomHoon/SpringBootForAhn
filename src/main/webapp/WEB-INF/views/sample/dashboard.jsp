@@ -8,7 +8,7 @@
 <body>
 <div>
 	<br/>
-		dashboard(body)
+		dashboard(body) 깃테스트
 		${test} <- controller 에서 넘어옴fdhgfjhgfjhgfjhg
 	<br/>
 </div>

@@ -5,7 +5,6 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.demo.board.dto.MemberDTO;
@@ -34,12 +33,5 @@ public class MemberController {
 			return "redirect:/getBoard";
 		}
 		return "redirect:/login";
-	}
-	@GetMapping(value="logout.do")
-	public String logout(MemberDTO mDto, HttpServletRequest request) throws Exception{
-		// 세션 모두 초기화
-		HttpSession session = request.getSession();
-		session.invalidate();
-		return "redirect:/getBoard";
 	}
 }

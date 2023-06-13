@@ -62,6 +62,9 @@ $(document).ready(function() {
 				<li class="nav-item">
 					<a class="nav-link" href='join'>회원가입</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href='userInfo'>회원정보</a>
+				</li>
 			</ul>
 			</div>  
 		</nav>

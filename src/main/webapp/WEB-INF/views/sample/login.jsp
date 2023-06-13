@@ -30,16 +30,29 @@
 		<br></br>
 		<h2>로그인</h2>
 		<div class="container">
-			<form action="join.do" method="post">
+			<form action="login.do" method="post">
 				<div class="form-group">
-					<label for="ID">ID:</label><input type="ID" class="form-control" placeholder="Enter ID" id="ID">
+					<label for="ID">ID:</label>
+					<input type="text" class="form-control" name="board_writer" placeholder="Enter ID">
 				</div>			
 				<div class="form-group">
-					<label for="PWD">Password:</label><input type="password" class="form-control" placeholder="Enter Password" id="PWD">
+					<label for="PWD">Password:</label>
+					<input type="password" class="form-control" name="board_writer_pw" placeholder="Enter Pass	word">
 				</div>
+				<input type="submit" value="로그인">
 			</form>
-			<button type="submit" class="btn btn-primary">로그인</button>	
 		</div>
+		
+<!-- 	<form action="join.do" method="post">
+		아이디:<input type="text" name="board_writer"><br/>
+		비밀번호:<input type="password" name="board_writer_pw"><br/>
+		이름:<input type="text" name="board_writer_name"><br/>
+		전화번호:
+		<input type="text" name="board_writer_phone"><br/>
+		이메일:
+		<input type="text" name="board_writer_email"><br/>
+		<input type="submit" value="가입">
+	</form> -->
 	</div>
 </body>
 </html>

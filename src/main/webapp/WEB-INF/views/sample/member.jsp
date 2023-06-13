@@ -17,33 +17,14 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  </style>
-<script type="text/javascript">
-$(document).ready(function() {
-    $("#writeBtn").click(function(){
-    	location.href ="write";
-    })
-    $.ajax({url: "sample/", success: function(result){             
-        var html = "";
-    	result.forEach(function(item){
-        	html+= "<tr> <td><a href = 'views?idx=" + item.board_writer_idx + "'>" + item.board_writer + "</a>"
-        })
-       $("#listArea").append(html)
-       $('#example').DataTable();
-     }});
-     $("#deleteBtn").click(function(){
-    	location.href ="write";
-     })
-} );
-</script>
+<link rel="stylesheet" href="resources/css/waitMe.css" />
+<link rel="stylesheet" href="/resources/css/waitMe.min.css" />
+<script src="/resources/js/waitMe.js"></script>
+<script src="/resources/js/waitMe.min.js"></script>
 </head>
 <body>
 	<div class="jumbotron text-center" style="margin-bottom:0">
+	<div id="container"></div>
  	<h1>회원정보</h1>
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
@@ -52,7 +33,7 @@ $(document).ready(function() {
 					<a class="nav-link" href="home">홈</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="logout">로그아웃</a>
+					<a class="nav-link" href="logout.do">로그아웃</a>
 				</li>
 			</ul>
 		</div>  
@@ -65,22 +46,13 @@ $(document).ready(function() {
 			        <thead>
 			            <tr>
 			                <th>ID</th>
-			                <th>PW</th>
+			                <th>NAME</th>
 			                <th>PHONE</th>
 			                <th>EMAIL</th>
 			            </tr>
 			        </thead>
-			        <tbody id = "listArea">
-		                <c:forEach var="item" items="${MemberList}">
-							<table>
-								<tr>
-									<td>${item.board_writer}</td>
-									<td>${item.board_writer_pw}</td>
-									<td>${item.board_writer_phone}</td>
-									<td>${item.board_writer_email}</td>
-								</tr>
-							</table>
-						</c:forEach>
+			        <tbody id="listArea">
+			        	
 			        </tbody>
 			    </table>
 			</div>
@@ -88,4 +60,90 @@ $(document).ready(function() {
 	</div>
 </div>
 </body>
+<script type="text/javascript">
+
+// 로딩바 함수 생성
+var ajaxLoading = function(isLoading){
+	if (isLoading == false) {
+ 		$("body").waitMe("hide");
+	} else {
+		$("body").waitMe({
+			effect: "ios",
+			text: "처리중입니다.",
+			bg: 'rgba(255,255,255,0.7)',
+			color: '#000',
+			source: 'waitme/img.svg',
+		});   
+	}
+};
+
+$( document ).ready(function() {
+	bringMember();
+});
+
+// 	 ajaxLoading(true);
+// 	 setTimeout(ajaxLoading(false), 2000);
+	function bringMember() {
+		$.ajax({
+		   type : 'get',           // 타입 (get, post, put 등등)
+		   url : '/getMember',           // 요청할 서버url
+	// 	   headers : {              // Http header
+	// 	     "Content-Type" : "application/json",
+	// 	     "X-HTTP-Method-Override" : "POST"
+	// 	   },
+// 		   dataType : 'json',       // 데이터 타입 (html, xml, json, text 등등)
+	// 	   data : JSON.stringify({  // 보낼 데이터 (Object , String, Array)
+	// 	     "no" : no,
+	// 	     "name" : name,
+	// 	     "nick" : nick
+	// 	   }),
+		   success : function(result) { // 결과 성공 콜백함수
+		       console.log(result); //list로 넘어옴
+		       setTimeout(ajaxLoading(false), 3000);
+		       drawTable(result);
+		   },
+		   error : function(request, status, error) { // 결과 에러 콜백함수
+		       console.log(error)
+		   },
+		   beforeSend: function( xhr ) {
+				//ajax가 서버에 요청하기 전에 실행하는 로직
+			   ajaxLoading(true);
+			},
+// 			complete: function (data) {
+// 				//성공, 실패와 상관없이 실행하고 싶은 로직
+// 			}
+		})
+	}
+	
+	function drawTable(memberList) {
+		console.log(memberList[0].board_writer);
+		
+		let target = document.querySelector("#listArea");
+		
+		target.innerHTML = '<table>'
+		memberList.forEach(member => {
+			target.innerHTML += '<tr>'
+							  + '<td>' + member.board_writer + '</td>'
+							  + '<td>' + member.board_writer_name + '</td>'
+							  + '<td>' + member.board_writer_phone + '</td>'
+							  + '<td>' + member.board_writer_email + '</td>'
+							  + '</tr>'
+		});
+		target.innerHTML += '</table>'
+	}
+</script>
+
+
+ <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
+  #container {
+	  margin: 20px;
+	  width: 200px;
+	  height: 200px;
+  }
+  </style>
+
 </html>

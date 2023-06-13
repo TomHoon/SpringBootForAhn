@@ -47,5 +47,19 @@ public class MemberController {
 		
 		return mv;
 	}
-	
+	@GetMapping(value="/logout.do")
+	public String logout(MemberDTO mDto, HttpServletRequest request) throws Exception {
+		HttpSession session = request.getSession();		
+		session.invalidate();
+		return "redirect:/getBoard";
+	}
+	@GetMapping(value="/userInfo")
+	public String userInfo(MemberDTO mDto, HttpServletRequest request) throws Exception {
+		HttpSession session = request.getSession();
+		mDto = (MemberDTO) session.getAttribute("signIn");
+		if(mDto  == null) {
+			return "redirect:/login";
+		}
+		return "sample/userInfo";
+	}
 }

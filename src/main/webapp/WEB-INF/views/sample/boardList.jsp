@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!-- jstl 라이브러리 불러오는 코드 -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -62,12 +63,7 @@ $(document).ready(function() {
 					<a class="nav-link" href="index">홈</a>
 				</li>
 				<li class="nav-item">
-					<c:if test="${not empty signIn}">
-					    <a class="nav-link" href='logout.do'>로그아웃</a>
-					</c:if>
-					<c:if test="${empty signIn}">
-						<a class="nav-link" href='login'>로그인</a>
-					</c:if>
+					<a class="nav-link" href='login'>로그인</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href='join'>회원가입</a>

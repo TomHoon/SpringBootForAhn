@@ -49,7 +49,7 @@ $(document).ready(function() {
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="index">홈</a>
+					<a class="nav-link" href="getBoard">홈</a>
 				</li>
 				<li class="nav-item">
 					<c:if test="${not empty signIn}">
@@ -64,6 +64,9 @@ $(document).ready(function() {
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href='userInfo'>회원정보</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href='memberList'>회원리스트</a>
 				</li>
 			</ul>
 			</div>  

@@ -30,7 +30,7 @@
 		<div class="collapse navbar-collapse" id="collapsibleNavbar">
 			<ul class="navbar-nav">
 				<li class="nav-item">
-					<a class="nav-link" href="home">홈</a>
+					<a class="nav-link" href="getBoard">홈</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="logout.do">로그아웃</a>

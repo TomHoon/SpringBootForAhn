@@ -85,8 +85,8 @@
 
 <body>
 
-<div id="tile_header"><tiles:insertAttribute name="tile_header" /></div>
-<div id="tile_body"><tiles:insertAttribute name="tile_body" /></div>
+<div id="tile_header"><tiles:insertAttribute name="header" /></div>
+<div id="tile_body"><tiles:insertAttribute name="body" /></div>
 
 
 </body>

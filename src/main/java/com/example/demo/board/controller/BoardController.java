@@ -22,10 +22,17 @@ public class BoardController {
 	public ModelAndView getBoard(ModelAndView mv) throws Exception {
 		List<BoardDTO> list = bService.getBoardList();
 		mv.addObject("BoardList", list);
-		mv.addObject("test", "테스트");
-		mv.setViewName("sample/boardList");
+		mv.addObject("test", "�뀒�뒪�듃");
+		mv.setViewName("sample/boardList.web");
 		
 		return mv;
+	}
+	
+	@GetMapping(value="/tiles")
+//	@ResponseBody
+	public String getTiles(ModelAndView mv) throws Exception {
+		
+		return "sample/boardList.web";
 	}
 	
 }

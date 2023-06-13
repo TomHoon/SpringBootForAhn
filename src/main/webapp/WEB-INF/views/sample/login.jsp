@@ -16,18 +16,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
-	<div class="jumbotron text-center" style="margin-bottom:0">
-	 	<h1>Hi.com</h1>
-		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-			<div class="collapse navbar-collapse" id="collapsibleNavbar">
-				<ul class="navbar-nav">
-					<li class="nav-item">
-						<a class="nav-link" href="join">회원가입</a>
-					</li>
-				</ul>
-			</div>  
-		</nav>
-		<br></br>
+	<div class="jumbotron text-center">
 		<h2>로그인</h2>
 		<div class="container">
 			<form action="login.do" method="post">

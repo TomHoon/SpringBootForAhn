@@ -25,19 +25,19 @@
 <body>
 	<div class="jumbotron text-center" style="margin-bottom:0">
 	<div id="container"></div>
- 	<h1>회원정보</h1>
-	<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-		<div class="collapse navbar-collapse" id="collapsibleNavbar">
-			<ul class="navbar-nav">
-				<li class="nav-item">
-					<a class="nav-link" href="getBoard">홈</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="logout.do">로그아웃</a>
-				</li>
-			</ul>
-		</div>  
-	</nav>
+<!--  	<h1>회원정보</h1> -->
+<!-- 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
+<!-- 		<div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
+<!-- 			<ul class="navbar-nav"> -->
+<!-- 				<li class="nav-item"> -->
+<!-- 					<a class="nav-link" href="getBoard">홈</a> -->
+<!-- 				</li> -->
+<!-- 				<li class="nav-item"> -->
+<!-- 					<a class="nav-link" href="logout.do">로그아웃</a> -->
+<!-- 				</li> -->
+<!-- 			</ul> -->
+<!-- 		</div>   -->
+<!-- 	</nav> -->
 	<div class="container" style="margin-top:30px">
 		<div class="row">
 			<div class="col-sm-12">

@@ -31,7 +31,7 @@ public class MemberController {
 		MemberDTO resultDTO = mService.login(mDto);
 		if(resultDTO.getBoard_writer().equals(mDto.getBoard_writer())&&
 			resultDTO.getBoard_writer_pw().equals(mDto.getBoard_writer_pw())) {
-			// 아이디와 비밀번호가 같으면, 세션을 얻어서 세션에 회원정보를 넣는다.
+			// �븘�씠�뵒�� 鍮꾨�踰덊샇媛� 媛숈쑝硫�, �꽭�뀡�쓣 �뼸�뼱�꽌 �꽭�뀡�뿉 �쉶�썝�젙蹂대�� �꽔�뒗�떎.
 			HttpSession session = request.getSession();
 			session.setAttribute("signIn", resultDTO);
 			return "redirect:/getBoard";
@@ -43,7 +43,7 @@ public class MemberController {
 		List<MemberDTO> list = mService.getMemberList();
 		mv.addObject("MemberList", list);
 		mv.addObject("test", "테스트");
-		mv.setViewName("sample/member");
+		mv.setViewName("sample/member.web");
 		
 		return mv;
 	}
@@ -60,6 +60,6 @@ public class MemberController {
 		if(mDto  == null) {
 			return "redirect:/login";
 		}
-		return "sample/userInfo";
+		return "sample/userInfo.web";
 	}
 }

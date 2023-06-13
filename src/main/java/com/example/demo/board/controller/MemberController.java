@@ -1,11 +1,15 @@
 package com.example.demo.board.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.example.demo.board.dto.MemberDTO;
 import com.example.demo.board.service.MemberService;
@@ -34,4 +38,14 @@ public class MemberController {
 		}
 		return "redirect:/login";
 	}
+	@GetMapping(value="/memberList")
+	public ModelAndView getMember(ModelAndView mv) throws Exception {
+		List<MemberDTO> list = mService.getMemberList();
+		mv.addObject("MemberList", list);
+		mv.addObject("test", "테스트");
+		mv.setViewName("sample/member");
+		
+		return mv;
+	}
+	
 }

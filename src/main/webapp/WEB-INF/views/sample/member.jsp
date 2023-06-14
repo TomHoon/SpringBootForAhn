@@ -42,6 +42,7 @@
 		<div class="row">
 			<div class="col-sm-12">
 		      <!-- <h2>°Ô½ÃÆÇ</h2> -->
+		      <a href="excel/download">¿¢¼¿´Ù¿î·Îµå</a>
 				<table id="example" class="display" style="width:100%">
 			        <thead>
 			            <tr>

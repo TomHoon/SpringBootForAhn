@@ -35,4 +35,10 @@ public class BoardController {
 		return "sample/boardList.web";
 	}
 	
+	//pdf 뷰어 테스트용
+	@GetMapping(value="/pdf/view")
+	public String getPdf() throws Exception {
+		return "sample/pdf";
+	}
+	
 }

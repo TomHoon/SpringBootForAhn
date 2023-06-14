@@ -23,42 +23,6 @@
 <script src="/resources/js/waitMe.min.js"></script>
 </head>
 <body>
-	
-<!--  	<h1>회원정보</h1> -->
-<!-- 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
-<!-- 		<div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
-<!-- 			<ul class="navbar-nav"> -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<a class="nav-link" href="getBoard">홈</a> -->
-<!-- 				</li> -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<a class="nav-link" href="logout.do">로그아웃</a> -->
-<!-- 				</li> -->
-<!-- 			</ul> -->
-<!-- 		</div>   -->
-<!-- 	</nav> -->
-<!-- 	<div class="container" style="margin-top:30px"> -->
-<!-- 		<div class="row"> -->
-<!-- 			<div class="col-sm-12"> -->
-<!-- 		      <h2>게시판</h2> -->
-<!-- 		      <a href="excel/download">엑셀다운로드</a> -->
-<!-- 				<table id="example" class="display" style="width:100%"> -->
-<!-- 			        <thead> -->
-<!-- 			            <tr> -->
-<!-- 			                <th>ID</th> -->
-<!-- 			                <th>NAME</th> -->
-<!-- 			                <th>PHONE</th> -->
-<!-- 			                <th>EMAIL</th> -->
-<!-- 			            </tr> -->
-<!-- 			        </thead> -->
-<!-- 			        <tbody id="listArea"> -->
-			        	
-<!-- 			        </tbody> -->
-<!-- 			    </table> -->
-<!-- 			</div> -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-<!-- </div> -->
 	<div class="table-wrap">
 		<table class="table table-striped">
 			<tr>

@@ -23,8 +23,7 @@
 <script src="/resources/js/waitMe.min.js"></script>
 </head>
 <body>
-	<div class="jumbotron text-center" style="margin-bottom:0">
-	<div id="container"></div>
+	
 <!--  	<h1>회원정보</h1> -->
 <!-- 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
 <!-- 		<div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
@@ -38,28 +37,80 @@
 <!-- 			</ul> -->
 <!-- 		</div>   -->
 <!-- 	</nav> -->
-	<div class="container" style="margin-top:30px">
-		<div class="row">
-			<div class="col-sm-12">
-		      <!-- <h2>게시판</h2> -->
-		      <a href="excel/download">엑셀다운로드</a>
-				<table id="example" class="display" style="width:100%">
-			        <thead>
-			            <tr>
-			                <th>ID</th>
-			                <th>NAME</th>
-			                <th>PHONE</th>
-			                <th>EMAIL</th>
-			            </tr>
-			        </thead>
-			        <tbody id="listArea">
+<!-- 	<div class="container" style="margin-top:30px"> -->
+<!-- 		<div class="row"> -->
+<!-- 			<div class="col-sm-12"> -->
+<!-- 		      <h2>게시판</h2> -->
+<!-- 		      <a href="excel/download">엑셀다운로드</a> -->
+<!-- 				<table id="example" class="display" style="width:100%"> -->
+<!-- 			        <thead> -->
+<!-- 			            <tr> -->
+<!-- 			                <th>ID</th> -->
+<!-- 			                <th>NAME</th> -->
+<!-- 			                <th>PHONE</th> -->
+<!-- 			                <th>EMAIL</th> -->
+<!-- 			            </tr> -->
+<!-- 			        </thead> -->
+<!-- 			        <tbody id="listArea"> -->
 			        	
-			        </tbody>
-			    </table>
-			</div>
+<!-- 			        </tbody> -->
+<!-- 			    </table> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+<!-- 	</div> -->
+<!-- </div> -->
+	<div class="table-wrap">
+		<table class="table table-striped">
+			<tr>
+				<th>제목</th>
+				<th>이름</th>
+				<th>내용</th>
+				<th>날짜</th>
+			</tr>
+			<tr>
+				<td>제목1</td>
+				<td>이름1</td>
+				<td>내용1</td>
+				<td>날짜1</td>
+			</tr>
+			<tr>
+				<td>제목2</td>
+				<td>이름2</td>
+				<td>내용2</td>
+				<td>날짜2</td>
+			</tr>
+			<tr>
+				<td>제목3</td>
+				<td>이름3</td>
+				<td>내용3</td>
+				<td>날짜3</td>
+			</tr>
+		</table>
+		
+		<hr/>
+		
+		<button type="button" class="btn btn-primary btn-sm float-right">글쓰기</button>
+		
+		<div class="page-wrapper">
+		  <ul class="pagination">
+		    <li class="page-item disabled">
+		      <span class="page-link">Previous</span>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">1</a></li>
+		    <li class="page-item active">
+		      <span class="page-link">
+		        2
+		        <span class="sr-only">(current)</span>
+		      </span>
+		    </li>
+		    <li class="page-item"><a class="page-link" href="#">3</a></li>
+		    <li class="page-item">
+		      <a class="page-link" href="#">Next</a>
+		    </li>
+		  </ul>
 		</div>
 	</div>
-</div>
+	<div id="container"></div>
 </body>
 <script type="text/javascript">
 
@@ -140,10 +191,14 @@ $( document ).ready(function() {
     height: 200px;
     background: #aaa;
   }
-  #container {
+  #loading-container{
 	  margin: 20px;
 	  width: 200px;
 	  height: 200px;
+  }
+  .table-wrap{
+  	width: 90%;
+  	margin:0 auto; 
   }
   </style>
 

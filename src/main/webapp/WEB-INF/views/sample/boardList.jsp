@@ -47,14 +47,15 @@
 		    <li class="page-item disabled">
 		      <span class="page-link">Previous</span>
 		    </li>
-		    <li class="page-item"><a class="page-link" href="#">1</a></li>
-		    <li class="page-item active">
-		      <span class="page-link">
-		        2
-		        <span class="sr-only">(current)</span>
-		      </span>
+		    <li class="page-item">
+		    	<a class="page-link" href="#">1</a>
 		    </li>
-		    <li class="page-item"><a class="page-link" href="#">3</a></li>
+		    <li class="page-item active">
+		      <a class="page-link" href="#">2</a>
+		    </li>
+		    <li class="page-item">
+		    	<a class="page-link" href="#">3</a>
+		    </li>
 		    <li class="page-item">
 		      <a class="page-link" href="#">Next</a>
 		    </li>
@@ -135,16 +136,16 @@ function drawTable(list) {
 	list.forEach(item => {
 		content.innerHTML += '<tr>'
 			+ "<td>"
-			+ item.getBoard_title
+			+ item.board_title
 			+ "</td>"
 			+ "<td>"
-			+ item.getBoard_writer
+			+ item.board_writer
 			+ "</td>"
 			+ "<td>"
-			+ item.getBoard_contents
+			+ item.board_contents
 			+ "</td>"
 			+ "<td>"
-			+ item.getBoard_write_date
+			+ item.board_write_date
 			+ "</td>"
 			+"</tr>";
 	});

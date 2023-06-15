@@ -40,6 +40,9 @@
 				<li class="nav-item">
 					<a class="nav-link" href='memberList'>회원리스트</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" href='getBoard'>게시판</a>
+				</li>
 			</ul>
 			</div>  
 		</nav>

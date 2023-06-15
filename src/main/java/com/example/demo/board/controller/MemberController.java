@@ -49,6 +49,7 @@ public class MemberController {
 		List<MemberDTO> list = mService.getMemberList();
 		mv.addObject("MemberList", list);
 		mv.addObject("test", "테스트");
+<<<<<<< HEAD
 		mv.setViewName("sample/member.web");
 		
 		return mv;
@@ -107,4 +108,11 @@ public class MemberController {
       wb.write(response.getOutputStream());
       wb.close();
 	}
+=======
+		mv.setViewName("sample/member");
+		
+		return mv;
+	}
+	
+>>>>>>> 5d896c1e3b776aa19447256aa5b8a8a9ea8fc1d4
 }

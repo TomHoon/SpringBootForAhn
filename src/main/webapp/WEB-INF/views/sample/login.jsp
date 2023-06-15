@@ -16,6 +16,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
 	<div class="jumbotron text-center">
 		<h2>로그인</h2>
 		<div class="container">
@@ -42,6 +43,32 @@
 		<input type="text" name="board_writer_email"><br/>
 		<input type="submit" value="가입">
 	</form> -->
+=======
+	<div class="jumbotron text-center" style="margin-bottom:0">
+	 	<h1>Hi.com</h1>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link" href="join">회원가입</a>
+					</li>
+				</ul>
+			</div>  
+		</nav>
+		<br></br>
+		<h2>로그인</h2>
+		<div class="container">
+			<form action="join.do" method="post">
+				<div class="form-group">
+					<label for="ID">ID:</label><input type="ID" class="form-control" placeholder="Enter ID" id="ID">
+				</div>			
+				<div class="form-group">
+					<label for="PWD">Password:</label><input type="password" class="form-control" placeholder="Enter Password" id="PWD">
+				</div>
+			</form>
+			<button type="submit" class="btn btn-primary">로그인</button>	
+		</div>
+>>>>>>> 5d896c1e3b776aa19447256aa5b8a8a9ea8fc1d4
 	</div>
 </body>
 </html>

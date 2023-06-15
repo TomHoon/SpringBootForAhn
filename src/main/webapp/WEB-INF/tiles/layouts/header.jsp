@@ -15,7 +15,7 @@
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 </head>
-<body>
+<body> 
 	<div class="jumbotron text-center" style="margin-bottom:0">
 	 	<h1>Hi.com</h1></br>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark">

@@ -71,7 +71,7 @@ var ajaxLoading = function(isLoading){
 $( document ).ready(function() {
 	bringMember();
 });
-
+ 
 // 	 ajaxLoading(true);
 // 	 setTimeout(ajaxLoading(false), 2000);
 	function bringBoard() {

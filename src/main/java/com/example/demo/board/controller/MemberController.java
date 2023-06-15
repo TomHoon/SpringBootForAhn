@@ -19,7 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.example.demo.board.dto.MemberDTO;
 import com.example.demo.board.service.MemberService;
 
-@Controller
+@Controller 
 public class MemberController {
 	
 	@Autowired

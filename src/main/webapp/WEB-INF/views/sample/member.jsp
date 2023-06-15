@@ -40,7 +40,7 @@
 			                <th>PHONE</th>
 			                <th>EMAIL</th>
 			            </tr>
-			        </thead>
+			        </thead> 
 			        <tbody id="listArea">
 			        </tbody>
 			    </table>

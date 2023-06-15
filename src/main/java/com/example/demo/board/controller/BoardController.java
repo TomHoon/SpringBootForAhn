@@ -13,7 +13,7 @@ import com.example.demo.board.service.BoardService;
 //@RestController
 @Controller
 public class BoardController {
-	
+	 
 	@Autowired
 	BoardService bService;
 	

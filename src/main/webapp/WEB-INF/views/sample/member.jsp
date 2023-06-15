@@ -34,7 +34,7 @@
 		      <a href="excel/download">¿¢¼¿´Ù¿î·Îµå</a>
 				<table id="example" class="display" style="width:100%">
 			        <thead>
-			            <tr>
+			            <tr> 
 			                <th>ID</th>
 			                <th>NAME</th>
 			                <th>PHONE</th>

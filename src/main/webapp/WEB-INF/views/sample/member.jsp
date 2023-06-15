@@ -7,38 +7,27 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="EUC-KR">
-<title>Insert title</title>
+<title>Hi.com</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
+<link rel="stylesheet" href="resources/css/waitMe.css" />
+<link rel="stylesheet" href="/resources/css/waitMe.min.css" />
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<link rel="stylesheet" href="resources/css/waitMe.css" />
-<link rel="stylesheet" href="/resources/css/waitMe.min.css" />
 <script src="/resources/js/waitMe.js"></script>
 <script src="/resources/js/waitMe.min.js"></script>
+
 </head>
 <body>
 	<div class="jumbotron text-center" style="margin-bottom:0">
-	<div id="container"></div>
-<!--  	<h1>회원정보</h1> -->
-<!-- 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
-<!-- 		<div class="collapse navbar-collapse" id="collapsibleNavbar"> -->
-<!-- 			<ul class="navbar-nav"> -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<a class="nav-link" href="getBoard">홈</a> -->
-<!-- 				</li> -->
-<!-- 				<li class="nav-item"> -->
-<!-- 					<a class="nav-link" href="logout.do">로그아웃</a> -->
-<!-- 				</li> -->
-<!-- 			</ul> -->
-<!-- 		</div>   -->
-<!-- 	</nav> -->
-	<div class="container" style="margin-top:30px">
 		<div class="row">
 			<div class="col-sm-12">
 		      <!-- <h2>게시판</h2> -->
@@ -53,13 +42,11 @@
 			            </tr>
 			        </thead>
 			        <tbody id="listArea">
-			        	
 			        </tbody>
 			    </table>
 			</div>
 		</div>
 	</div>
-</div>
 </body>
 <script type="text/javascript">
 
@@ -135,16 +122,16 @@ $( document ).ready(function() {
 </script>
 
 
- <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
-  #container {
-	  margin: 20px;
-	  width: 200px;
-	  height: 200px;
-  }
-  </style>
+<style>
+ .fakeimg {
+   height: 200px;
+   background: #aaa;
+ }
+ #container {
+  margin: 20px;
+  width: 200px;
+  height: 200px;
+ }
+ </style>
 
 </html>

@@ -17,12 +17,12 @@ public class BoardController {
 	@Autowired
 	BoardService bService;
 	
-	@GetMapping(value="/getBoard")
+	@GetMapping(value="/boardList")
 //	@ResponseBody
 	public ModelAndView getBoard(ModelAndView mv) throws Exception {
 		List<BoardDTO> list = bService.getBoardList();
 		mv.addObject("BoardList", list);
-		mv.addObject("test", "�뀒�뒪�듃");
+		mv.addObject("test", "테스트");
 		mv.setViewName("sample/boardList.web");
 		
 		return mv;

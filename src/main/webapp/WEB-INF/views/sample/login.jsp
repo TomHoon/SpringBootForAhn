@@ -26,22 +26,11 @@
 				</div>			
 				<div class="form-group">
 					<label for="PWD">Password:</label>
-					<input type="password" class="form-control" name="board_writer_pw" placeholder="Enter Pass	word">
+					<input type="password" class="form-control" name="board_writer_pw" placeholder="Enter Password">
 				</div>
 				<input type="submit" value="로그인">
 			</form>
 		</div>
-		
-<!-- 	<form action="join.do" method="post">
-		아이디:<input type="text" name="board_writer"><br/>
-		비밀번호:<input type="password" name="board_writer_pw"><br/>
-		이름:<input type="text" name="board_writer_name"><br/>
-		전화번호:
-		<input type="text" name="board_writer_phone"><br/>
-		이메일:
-		<input type="text" name="board_writer_email"><br/>
-		<input type="submit" value="가입">
-	</form> -->
 	</div>
 </body>
 </html>

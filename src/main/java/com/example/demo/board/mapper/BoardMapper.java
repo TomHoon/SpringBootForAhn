@@ -10,6 +10,7 @@ import com.example.demo.board.dto.BoardDTO;
 @Mapper
 @Repository
 public interface BoardMapper {
+	
 	public List<BoardDTO> getBoardList() throws Exception;
 
 }

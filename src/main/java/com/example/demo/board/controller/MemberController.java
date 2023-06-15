@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -70,8 +71,8 @@ public class MemberController {
 	
 	@GetMapping(value="/excel/download")
 	public void excelDownload(HttpServletResponse response) throws Exception {
-//		Workbook wb = new HSSFWorkbook(); // xls확장자
-      Workbook wb = new XSSFWorkbook(); // xlsx 확장자 
+		Workbook wb = new HSSFWorkbook(); // xls확장자
+//      Workbook wb = new XSSFWorkbook(); // xlsx 확장자 
       Sheet sheet = wb.createSheet("첫번째 시트");
       Row row = null;
       Cell cell = null;

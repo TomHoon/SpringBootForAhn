@@ -76,7 +76,7 @@ $( document ).ready(function() {
 	function bringBoard() {
 		$.ajax({
 		   type : 'get',           // 타입 (get, post, put 등등)
-		   url : '/boardList',           // 요청할 서버url
+		   url : '/getAjaxBoard',           // 요청할 서버url
 	// 	   headers : {              // Http header
 	// 	     "Content-Type" : "application/json",
 	// 	     "X-HTTP-Method-Override" : "POST"

@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.board.dto.BoardDTO;
 import com.example.demo.board.dto.MemberDTO;
+import com.example.demo.board.service.BoardService;
 import com.example.demo.board.service.MemberService;
 
 @RestController
@@ -16,6 +18,9 @@ public class RestApiController {
 	
 	@Autowired
 	MemberService mService;
+	
+	@Autowired
+	BoardService bService;
 	
 	@GetMapping(value="/getMember")
 	public List<MemberDTO> getMember() throws Exception{
@@ -28,5 +33,10 @@ public class RestApiController {
 	public MemberDTO searchMember(MemberDTO mDto) throws Exception {
 		mDto = mService.searchMember(mDto);
 		return mDto;
+	}
+	@GetMapping(value="/getAjaxBoard")
+	public List<BoardDTO> getAjaxBoard() throws Exception {
+		List<BoardDTO> list = bService.getBoardList();
+		return list;
 	}
 }

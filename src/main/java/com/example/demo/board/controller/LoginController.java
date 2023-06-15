@@ -9,7 +9,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class LoginController {
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public ModelAndView loginForm(ModelAndView mv) throws Exception {
-		mv.setViewName("sample/login");
+		mv.setViewName("sample/login.web");
 		return mv;
 	}
 }

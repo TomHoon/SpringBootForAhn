@@ -5,7 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Hi.com</title>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
 
@@ -22,7 +23,7 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav">
 					<li class="nav-item">
-						<a class="nav-link" href="getBoard">홈</a>
+						<a class="nav-link" href="login">홈</a>
 					</li>
 					<li class="nav-item">
 						<c:if test="${empty signIn}">

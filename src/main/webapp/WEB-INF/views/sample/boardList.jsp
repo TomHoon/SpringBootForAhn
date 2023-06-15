@@ -1,15 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<!-- jstl ¶óÀÌºê·¯¸® ºÒ·¯¿À´Â ÄÚµå -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!-- jstl ë¼ì´ë¸ŒëŸ¬ë¦¬ ë¶ˆëŸ¬ì˜¤ëŠ” ì½”ë“œ -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<title>Hi.com.board</title>
 
-<meta charset="EUC-KR">
-<title>Hi.com</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.css">
@@ -30,16 +30,16 @@
 	<div class="jumbotron text-center" style="margin-bottom:0">
 		<div class="row">
 			<div class="col-sm-12">
-		      <!-- <h2>°Ô½ÃÆÇ</h2> -->
-		      <a href="excel/download">¿¢¼¿´Ù¿î·Îµå</a>
+		      <!-- <h2>ê²Œì‹œíŒ</h2> -->
+		      <a href="excel/download">ì—‘ì…€ë‹¤ìš´ë¡œë“œ</a>
 				<table id="example" class="display" style="width:100%">
 			        <thead>
 			            <tr>
-			                <th>Á¦¸ñ</th>
-			                <th>³»¿ë</th>
-			                <th>ÀÛ¼ºÀÚ</th>
-			                <th>ÀÛ¼ºÀÏ</th>
-			                <th>Á¶È¸¼ö</th>
+			                <th>ì œëª©</th>
+			                <th>ë‚´ìš©</th>
+			                <th>ì‘ì„±ì</th>
+			                <th>ì‘ì„±ì¼</th>
+			                <th>ì¡°íšŒìˆ˜</th>
 			            </tr>
 			        </thead>
 			        <tbody id="listArea">
@@ -49,18 +49,17 @@
 		</div>
 	</div>
 </body>
-</html>
 
 <script type="text/javascript">
 
-// ·Îµù¹Ù ÇÔ¼ö »ı¼º
+// ë¡œë”©ë°” í•¨ìˆ˜ ìƒì„±
 var ajaxLoading = function(isLoading){
 	if (isLoading == false) {
  		$("body").waitMe("hide");
 	} else {
 		$("body").waitMe({
 			effect: "ios",
-			text: "Ã³¸®ÁßÀÔ´Ï´Ù.",
+			text: "ì²˜ë¦¬ì¤‘ì…ë‹ˆë‹¤.",
 			bg: 'rgba(255,255,255,0.7)',
 			color: '#000',
 			source: 'waitme/img.svg',
@@ -69,39 +68,39 @@ var ajaxLoading = function(isLoading){
 };
 
 $( document ).ready(function() {
-	bringMember();
+	bringBoard();
 });
  
 // 	 ajaxLoading(true);
 // 	 setTimeout(ajaxLoading(false), 2000);
 	function bringBoard() {
 		$.ajax({
-		   type : 'get',           // Å¸ÀÔ (get, post, put µîµî)
-		   url : '/getBoard',           // ¿äÃ»ÇÒ ¼­¹öurl
+		   type : 'get',           // íƒ€ì… (get, post, put ë“±ë“±)
+		   url : '/boardList',           // ìš”ì²­í•  ì„œë²„url
 	// 	   headers : {              // Http header
 	// 	     "Content-Type" : "application/json",
 	// 	     "X-HTTP-Method-Override" : "POST"
 	// 	   },
-// 		   dataType : 'json',       // µ¥ÀÌÅÍ Å¸ÀÔ (html, xml, json, text µîµî)
-	// 	   data : JSON.stringify({  // º¸³¾ µ¥ÀÌÅÍ (Object , String, Array)
+// 		   dataType : 'json',       // ë°ì´í„° íƒ€ì… (html, xml, json, text ë“±ë“±)
+	// 	   data : JSON.stringify({  // ë³´ë‚¼ ë°ì´í„° (Object , String, Array)
 	// 	     "no" : no,
 	// 	     "name" : name,
 	// 	     "nick" : nick
 	// 	   }),
-		   success : function(result) { // °á°ú ¼º°ø Äİ¹éÇÔ¼ö
-		       console.log(result); //list·Î ³Ñ¾î¿È
+		   success : function(result) { // ê²°ê³¼ ì„±ê³µ ì½œë°±í•¨ìˆ˜
+		       console.log(result); //listë¡œ ë„˜ì–´ì˜´
 		       setTimeout(ajaxLoading(false), 3000);
 		       drawTable(result);
 		   },
-		   error : function(request, status, error) { // °á°ú ¿¡·¯ Äİ¹éÇÔ¼ö
+		   error : function(request, status, error) { // ê²°ê³¼ ì—ëŸ¬ ì½œë°±í•¨ìˆ˜
 		       console.log(error)
 		   },
 		   beforeSend: function( xhr ) {
-				//ajax°¡ ¼­¹ö¿¡ ¿äÃ»ÇÏ±â Àü¿¡ ½ÇÇàÇÏ´Â ·ÎÁ÷
+				//ajaxê°€ ì„œë²„ì— ìš”ì²­í•˜ê¸° ì „ì— ì‹¤í–‰í•˜ëŠ” ë¡œì§
 			   ajaxLoading(true);
 			},
 // 			complete: function (data) {
-// 				//¼º°ø, ½ÇÆĞ¿Í »ó°ü¾øÀÌ ½ÇÇàÇÏ°í ½ÍÀº ·ÎÁ÷
+// 				//ì„±ê³µ, ì‹¤íŒ¨ì™€ ìƒê´€ì—†ì´ ì‹¤í–‰í•˜ê³  ì‹¶ì€ ë¡œì§
 // 			}
 		})
 	}
@@ -124,4 +123,6 @@ $( document ).ready(function() {
 		target.innerHTML += '</table>'
 	}
 </script>
-					<!-- <button type="button" class="btn btn-primary" id = "writeBtn">±Û¾²±â</button> -->
+					<!-- <button type="button" class="btn btn-primary" id = "writeBtn">ê¸€ì“°ê¸°</button> -->
+
+</html>

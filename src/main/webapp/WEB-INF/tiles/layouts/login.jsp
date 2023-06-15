@@ -3,10 +3,9 @@
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
 
 <!DOCTYPE html>
-
 <html lang="kr">
 <head>
-  <meta charset="utf-8">
+<meta charset="utf-8">
 
 <!-- jQuery -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

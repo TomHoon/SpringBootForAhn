@@ -11,28 +11,23 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
 <!-- common CSS -->
 <link rel="stylesheet" href="<c:url value='/resources/common/css/common.css'/>" >
-
 <!-- Custom styles for this template -->
 <link rel="stylesheet" href="<c:url value='/resources/common/css/signin.css'/>" >
 
-  
-  <style>
-  body{padding : 0px}
-  	
-  	#tile_body {
-  		width:100%; 
-  		float:left;
-  	}
-  </style>
 </head>
 
 <body class="text-center">
-
-<div id="tile_body"><tiles:insertAttribute name="tile_body" /></div>
-
-
+	<div id="tile_body"><tiles:insertAttribute name="tile_body" /></div>
 </body>
+
+<style>
+body{padding : 0px}
+	
+#tile_body {
+	width:100%; 
+	float:left;
+}
+</style>
 </html>

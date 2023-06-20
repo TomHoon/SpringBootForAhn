@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- jstl 라이브러리 불러오는 코드 -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
@@ -32,13 +31,13 @@
 			<div class="col-sm-12">
 		      <!-- <h2>게시판</h2> -->
 		      <a href="excel/download">엑셀다운로드</a>
-				<table id="example" class="display" style="width:100%">
+				<table class="table table-hover">
 			        <thead>
 			            <tr> 
-			                <th>ID</th>
-			                <th>NAME</th>
-			                <th>PHONE</th>
-			                <th>EMAIL</th>
+			                <th scope="col" class="text-center">아이디</th>
+							<th scope="col" class="text-center">비밀번호</th>
+							<th scope="col" class="text-center">핸드폰번호</th>
+							<th scope="col" class="text-center">이메일</th>
 			            </tr>
 			        </thead> 
 			        <tbody id="listArea">

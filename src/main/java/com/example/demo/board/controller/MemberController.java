@@ -71,8 +71,8 @@ public class MemberController {
 	
 	@GetMapping(value="/excel/download")
 	public void excelDownload(HttpServletResponse response) throws Exception {
-		Workbook wb = new HSSFWorkbook(); // xls확장자
-//      Workbook wb = new XSSFWorkbook(); // xlsx 확장자 
+	//Workbook wb = new HSSFWorkbook(); // xls확장자
+      Workbook wb = new XSSFWorkbook(); // xlsx 확장자 
       Sheet sheet = wb.createSheet("첫번째 시트");
       Row row = null;
       Cell cell = null;

@@ -1,14 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>Hi.com.join</title>
 </head>
 <body>
 
-	<h2>ȸ������</h2>
+	<h2>회원가입</h2>
 	
 
 </body>
@@ -16,12 +15,12 @@
 
 
 <!-- 	<form action="join.do" method="post">
-		���̵�:<input type="text" name="board_writer"><br/>
-		��й�ȣ:<input type="password" name="board_writer_pw"><br/>
-		�̸�:<input type="text" name="board_writer_name"><br/>
-		��ȭ��ȣ:
+		아이디:<input type="text" name="board_writer"><br/>
+		비밀번호:<input type="password" name="board_writer_pw"><br/>
+		이름:<input type="text" name="board_writer_name"><br/>
+		전화번호:
 		<input type="text" name="board_writer_phone"><br/>
-		�̸���:
+		이메일:
 		<input type="text" name="board_writer_email"><br/>
-		<input type="submit" value="����">
+		<input type="submit" value="가입">
 	</form> -->
